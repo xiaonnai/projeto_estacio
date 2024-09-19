@@ -11,7 +11,7 @@ logging.basicConfig(filename='backup_log.log', level=logging.INFO,
 # função de upload
 def upload_para_s3(diretorio_local, nome_bucket, diretorio_s3=None):
     s3_client = boto3.client('s3')
-    #sobre as credenciais, inicializar primeiro o arquivo C:\Users\SEU_USUARIO\.aws\credentials, que o comando acima puxará elas automaticamente
+    
     try:
         for root, pastas, arquivos in os.walk(diretorio_local):
             for arquivo in arquivos:
