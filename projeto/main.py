@@ -3,7 +3,6 @@ import os
 import datetime
 import logging
 from botocore.exceptions import NoCredentialsError
-from config import DIRETORIO_S3,NOME_BUCKET_S3,DIRETORIO_LOCAL
 
 # logging
 logging.basicConfig(filename='backup_log.log', level=logging.INFO, 
@@ -34,6 +33,7 @@ def upload_para_s3(diretorio_local, nome_bucket, diretorio_s3=None):
 
 # funçao de backup
 def backup_diario():
+  #trocar os conteudos das variaveis por valores reais
     diretorio_local = "C:/caminho/para/diretorio/local"
 
     nome_bucket = "nome-do-seu-bucket"
