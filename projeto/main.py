@@ -25,8 +25,6 @@ def upload_para_s3(diretorio_local, nome_bucket, diretorio_s3=None):
     except NoCredentialsError:
         logging.error("Credenciais da AWS não encontradas")
 
-        print("Erro: Credenciais da AWS não encontradas. Verifique sua configuração.")
-
         return False
     
     return True
@@ -36,7 +34,7 @@ def backup_diario():
   #trocar os conteudos das variaveis por valores reais
     diretorio_local = "C:/caminho/para/diretorio/local"
 
-    nome_bucket = "nome-do-seu-bucket"
+    nome_bucket = "nome-do-bucket"
 
     diretorio_s3 = f"backup_diario/{datetime.date.today()}"
 
